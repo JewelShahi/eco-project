@@ -1,4 +1,6 @@
-// import { Add, Remove } from "@material-ui/icons";
+import AddIcon from '@mui/icons-material/Add';
+import CloseIcon from '@mui/icons-material/Close';
+
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -158,14 +160,14 @@ const Cart = () => {
     <Container>
       <Navbar />
       <Wrapper>
-        <Title>YOUR BAG</Title>
+        <Title>Your Cart</Title>
         <Top>
-          <TopButton>CONTINUE SHOPPING</TopButton>
+          <TopButton>Continue Shopping</TopButton>
           <TopTexts>
-            <TopText>Shopping Bag(2)</TopText>
+            <TopText>Shopping Cart(2)</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
-          <TopButton type="filled">CHECKOUT NOW</TopButton>
+          <TopButton type="filled">Checkout Now</TopButton>
         </Top>
         <Bottom>
           <Info>
@@ -187,12 +189,9 @@ const Cart = () => {
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
-                  {/* <Add /> */}
-                  <div>+</div>
-
+                  <AddIcon />
                   <ProductAmount>2</ProductAmount>
-                  {/* <Remove /> */}
-                  <div>-</div>
+                  <CloseIcon />
                 </ProductAmountContainer>
                 <ProductPrice>$ 30</ProductPrice>
               </PriceDetail>
@@ -216,19 +215,16 @@ const Cart = () => {
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
-                  {/* <Add /> */}
-                  <div>+</div>
-
+                  <AddIcon />
                   <ProductAmount>1</ProductAmount>
-                  {/* <Remove /> */}
-                  <div>-</div>
+                  <CloseIcon />
                 </ProductAmountContainer>
                 <ProductPrice>$ 20</ProductPrice>
               </PriceDetail>
             </Product>
           </Info>
           <Summary>
-            <SummaryTitle>ORDER SUMMARY</SummaryTitle>
+            <SummaryTitle>Order Summary</SummaryTitle>
             <SummaryItem>
               <SummaryItemText>Subtotal</SummaryItemText>
               <SummaryItemPrice>$ 80</SummaryItemPrice>
@@ -245,7 +241,7 @@ const Cart = () => {
               <SummaryItemText>Total</SummaryItemText>
               <SummaryItemPrice>$ 80</SummaryItemPrice>
             </SummaryItem>
-            <Button>CHECKOUT NOW</Button>
+            <Button>Checkout Now</Button>
           </Summary>
         </Bottom>
       </Wrapper>

@@ -1,4 +1,6 @@
-// import { Add, Remove } from "@material-ui/icons";
+import AddIcon from '@mui/icons-material/Add';
+import CloseIcon from '@mui/icons-material/Close';
+
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -154,13 +156,13 @@ const Product = () => {
           </FilterContainer>
           <AddContainer>
             <AmountContainer>
-              {/* <Remove /> */}
+              <CloseIcon />
               <div>-</div>
               <Amount>1</Amount>
-              {/* <Add /> */}
+              <AddIcon />
               <div>+</div>
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Button>Add To Cart</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
