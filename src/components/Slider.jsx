@@ -1,4 +1,6 @@
-// import { KeyboardArrowLeftIcon , KeyboardArrowRightIcon } from "@mui/icons-material";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+
 import { useState } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
@@ -10,6 +12,8 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  font-family: "Montserrat", "Arial" !important;
+
   ${mobile({ display: "none" })}
 `;
 
@@ -92,8 +96,7 @@ const Slider = () => {
   return (
     <Container>
       <Arrow direction="left" onClick={() => handleClick("left")}>
-        {/* <KeyboardArrowLeftIcon /> */}
-        &lArr;
+        <KeyboardArrowLeftIcon />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
@@ -104,14 +107,13 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
+              <Button>Show Now</Button>
             </InfoContainer>
           </Slide>
         ))}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
-        {/* <KeyboardArrowRightIcon /> */}
-        &rArr;
+        <KeyboardArrowRightIcon />
       </Arrow>
     </Container>
   );

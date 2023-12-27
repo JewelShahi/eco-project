@@ -1,11 +1,12 @@
 // import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
 
-const Container = styled.div``;
+const Container = styled.div`
+  font-family: "Montserrat", "Arial" !important;
+`;
 
 const Wrapper = styled.div`
   padding: 20px;
@@ -47,7 +48,6 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   ${mobile({ flexDirection: "column" })}
-
 `;
 
 const Info = styled.div`
@@ -157,7 +157,6 @@ const Cart = () => {
   return (
     <Container>
       <Navbar />
-      <Announcement />
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
@@ -190,7 +189,7 @@ const Cart = () => {
                 <ProductAmountContainer>
                   {/* <Add /> */}
                   <div>+</div>
-                  
+
                   <ProductAmount>2</ProductAmount>
                   {/* <Remove /> */}
                   <div>-</div>
@@ -219,11 +218,10 @@ const Cart = () => {
                 <ProductAmountContainer>
                   {/* <Add /> */}
                   <div>+</div>
-                  
+
                   <ProductAmount>1</ProductAmount>
                   {/* <Remove /> */}
                   <div>-</div>
-
                 </ProductAmountContainer>
                 <ProductPrice>$ 20</ProductPrice>
               </PriceDetail>

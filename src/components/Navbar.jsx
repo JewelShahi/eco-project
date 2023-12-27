@@ -1,11 +1,13 @@
 import { Badge } from "@mui/material";
-// import { SearchIcon, ShoppingCartIcon } from "@mui/icons-material"
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import SearchIcon from "@mui/icons-material/Search";
 import React from "react";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
   height: 60px;
+  font-family: "Montserrat", "Arial" !important;
   ${mobile({ height: "50px" })}
 `;
 
@@ -18,27 +20,25 @@ const Wrapper = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 1;
   display: flex;
+  flex: 1;
+  justify-content: flex-start;
   align-items: center;
-`;
-
-const Language = styled.span`
-  font-size: 14px;
-  cursor: pointer;
-  ${mobile({ display: "none" })}
 `;
 
 const SearchContainer = styled.div`
   border: 0.5px solid lightgray;
+  border-radius: 10px 10px 10px 10px;
   display: flex;
   align-items: center;
   margin-left: 25px;
-  padding: 5px;
 `;
 
 const Input = styled.input`
-  border: none;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+  border: 1px solid lightgray;
+  outline: none;
   ${mobile({ width: "50px" })}
 `;
 
@@ -51,6 +51,7 @@ const Logo = styled.h1`
   font-weight: bold;
   ${mobile({ fontSize: "24px" })}
 `;
+
 const Right = styled.div`
   flex: 1;
   display: flex;
@@ -66,26 +67,31 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
+const LogoText = styled.span`
+  color: red;
+`;
+
 const Navbar = () => {
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
           <SearchContainer>
             <Input placeholder="Search" />
-            {/* <SearchIcon style={{ color: "gray", fontSize: 16 }} /> */}
+            <SearchIcon style={{fontSize: 16, padding: "5px", borderRadius: "0px 10px 10px 0px"}} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>LAMA.</Logo>
+          <Logo>
+            Influxi<LogoText>fy</LogoText>
+          </Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem className="text-red-600">REGISTER</MenuItem>
+          <MenuItem>Sign In</MenuItem>
           <MenuItem>
             <Badge badgeContent={4} color="primary">
-              {/* <ShoppingCartOutlined /> */}
+              <ShoppingCartIcon />
             </Badge>
           </MenuItem>
         </Right>

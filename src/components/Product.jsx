@@ -1,8 +1,6 @@
-// import {
-//   FavoriteBorderIcon,
-//   SearchIcon,
-//   ShoppingCartIcon,
-// } from "@mui/icons-material";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import SearchIcon from "@mui/icons-material/Search";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import styled from "styled-components";
 
 const Info = styled.div`
@@ -31,6 +29,7 @@ const Container = styled.div`
   justify-content: center;
   background-color: #f5fbfd;
   position: relative;
+  font-family: "Montserrat", "Arial" !important;
 
   &:hover ${Info}{
     opacity: 1;
@@ -73,13 +72,13 @@ const Product = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Icon>
-          {/* <ShoppingCartIcon /> */}
+          <ShoppingCartIcon />
         </Icon>
         <Icon>
-          {/* <SearchIcon /> */}
+          <SearchIcon />
         </Icon>
         <Icon>
-          {/* <FavoriteBorderIcon /> */}
+          <FavoriteBorderIcon />
         </Icon>
       </Info>
     </Container>

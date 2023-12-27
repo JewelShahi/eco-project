@@ -1,9 +1,16 @@
-// import { FacebookIcon, InstagramIcon, MailOutlineIcon, PhoneIphoneIcon, PinterestIcon, LocationOnIcon, TwitterIcon } from '@mui/icons-material';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
+  font-family: "Montserrat", "Arial" !important;
   ${mobile({ flexDirection: "column" })}
 `;
 
@@ -80,7 +87,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>LAMA.</Logo>
+        <Logo>Influxify</Logo>
         <Desc>
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
@@ -88,16 +95,16 @@ const Footer = () => {
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
-            {/* <FacebookIcon /> */}
+            <FacebookIcon />
           </SocialIcon>
           <SocialIcon color="E4405F">
-            {/* <InstagramIcon /> */}
+            <InstagramIcon />
           </SocialIcon>
           <SocialIcon color="55ACEE">
-            {/* <TwitterIcon /> */}
+            <TwitterIcon />
           </SocialIcon>
           <SocialIcon color="E60023">
-            {/* <PinterestIcon /> */}
+            <PinterestIcon />
           </SocialIcon>
         </SocialContainer>
       </Left>
@@ -119,13 +126,13 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          {/* <LocationOnIcon style={{marginRight:"10px"}}/>*/} 622 Dixie Path , South Tobinchester 98336 
+          <LocationOnIcon style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336 
         </ContactItem>
         <ContactItem>
-          {/* <PhoneIphoneIcon style={{marginRight:"10px"}}/>*/} +1 234 56 78 
+          <PhoneIphoneIcon style={{marginRight:"10px"}}/> +1 234 56 78 
         </ContactItem>
         <ContactItem>
-          {/* <MailOutlineIcon style={{marginRight:"10px"}} />*/} contact@lama.dev
+          <MailOutlineIcon style={{marginRight:"10px"}} /> contact@lama.dev
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>
