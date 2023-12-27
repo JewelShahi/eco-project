@@ -1,5 +1,5 @@
 import AddIcon from '@mui/icons-material/Add';
-import CloseIcon from '@mui/icons-material/Close';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 import styled from "styled-components";
 import Footer from "../components/Footer";
@@ -191,7 +191,7 @@ const Cart = () => {
                 <ProductAmountContainer>
                   <AddIcon />
                   <ProductAmount>2</ProductAmount>
-                  <CloseIcon />
+                  <RemoveIcon />
                 </ProductAmountContainer>
                 <ProductPrice>$ 30</ProductPrice>
               </PriceDetail>
@@ -217,7 +217,7 @@ const Cart = () => {
                 <ProductAmountContainer>
                   <AddIcon />
                   <ProductAmount>1</ProductAmount>
-                  <CloseIcon />
+                  <RemoveIcon />
                 </ProductAmountContainer>
                 <ProductPrice>$ 20</ProductPrice>
               </PriceDetail>
