@@ -31,7 +31,7 @@ const Container = styled.div`
   position: relative;
   font-family: "Montserrat", "Arial" !important;
 
-  &:hover ${Info}{
+  &:hover ${Info} {
     opacity: 1;
   }
 `;
@@ -69,7 +69,13 @@ const Product = ({ item }) => {
   return (
     <Container>
       <Circle />
-      <Image src={item.img} />
+      <Image
+        src={item.img}
+        style={{
+          borderRadius: "10px",
+        }}
+      />
+
       <Info>
         <Icon>
           <ShoppingCartIcon />

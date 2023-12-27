@@ -1,5 +1,5 @@
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 import styled from "styled-components";
 import Footer from "../components/Footer";
@@ -108,15 +108,24 @@ const Amount = styled.span`
 
 const Button = styled.button`
   padding: 15px;
-  border: 2px solid teal;
+  border: 1px solid black;
   background-color: white;
+  border-radius: 10px;
   cursor: pointer;
   font-weight: 500;
+  transition: 300ms;
+  font-size: 18px;
+  outline: none;
 
   &:hover {
     background-color: #f8f4f4;
   }
+
+  &:active {
+    transform: scale(0.90);
+  }
 `;
+
 
 const Product = () => {
   return (
@@ -124,7 +133,12 @@ const Product = () => {
       <Navbar />
       <Wrapper>
         <ImgContainer>
-          <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+          <Image
+            src="https://i.ibb.co/S6qMxwr/jean.jpg"
+            style={{
+              borderRadius: "10px",
+            }}
+          />
         </ImgContainer>
         <InfoContainer>
           <Title>Denim Jumpsuit</Title>
@@ -138,13 +152,13 @@ const Product = () => {
           <Price>$ 20</Price>
           <FilterContainer>
             <Filter>
-              <FilterTitle>Color</FilterTitle>
+              <FilterTitle>Color(s): </FilterTitle>
               <FilterColor color="black" />
               <FilterColor color="darkblue" />
               <FilterColor color="gray" />
             </Filter>
             <Filter>
-              <FilterTitle>Size</FilterTitle>
+              <FilterTitle>Size(s): </FilterTitle>
               <FilterSize>
                 <FilterSizeOption>XS</FilterSizeOption>
                 <FilterSizeOption>S</FilterSizeOption>
